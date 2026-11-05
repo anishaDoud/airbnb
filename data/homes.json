@@ -1,0 +1,67 @@
+[
+  {
+    "homeName": "sas",
+    "location": "d"
+  },
+  {
+    "homeName": "sad",
+    "price": 3124,
+    "location": "sad",
+    "rating": 4,
+    "photourl": "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800"
+  },
+  {
+    "homeName": "SongareHomes",
+    "price": 2000000,
+    "location": "puumarth",
+    "rating": 4,
+    "photourl": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800"
+  },
+  {
+    "homeName": "Test",
+    "price": 100,
+    "location": "NY",
+    "rating": 4.5,
+    "photourl": "https://example.com/a.jpg"
+  },
+  {
+    "homeName": "Test",
+    "price": 100,
+    "location": "NY",
+    "rating": 4.5,
+    "photourl": "https://example.com/a.jpg",
+     "id":  1
+  },
+  {
+    "homeName": "Test",
+    "price": 100,
+    "location": "NY",
+    "rating": 4.5,
+    "photourl": "https://example.com/a.jpg",
+     "id": 7042313
+  },
+  {
+    "homeName": "SongareHomes",
+    "price": 5.354445333333334e+23,
+    "location": "r",
+    "rating": 2.2,
+    "photourl": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800",
+    "id": 704777
+  },
+  {
+    "homeName": "pt",
+    "price": 333333333333333,
+    "location": "f",
+    "rating": 4,
+    "photourl": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800",
+    "id": 851388
+  },
+  {
+    "homeName": "myHomw",
+    "price": 13131231,
+    "location": "dsd",
+    "rating": 4.5,
+    "photourl": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800",
+    "id": 693229
+  }
+]

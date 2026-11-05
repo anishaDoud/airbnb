@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register Your Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body class="auth-page">
+    <div class="auth-shell">
+      <div class="auth-card">
+        <div class="auth-header">
+          <span class="eyebrow">Host with Airbnb</span>
+          <h1>Register your home</h1>
+          <p>Share your space with guests from around the world.</p>
+        </div>
+
+        <form action="/hosts/register-home" method="POST" class="auth-form">
+          <div class="field-group">
+            <label for="homeName">Home name</label>
+            <input id="homeName" type="text" name="homeName" placeholder="Beachside villa" required />
+          </div>
+
+          <div class="field-group">
+            <label for="location">Location</label>
+            <input id="location" type="text" name="location" placeholder="Bali, Indonesia" required />
+          </div>
+
+          <div class="field-group">
+            <label for="price">Price per night</label>
+            <input id="price" type="number" name="price" placeholder="200" required />
+          </div>
+
+          <div class="field-group">
+            <label for="rating">Rating</label>
+            <input id="rating" type="number" step="0.1" min="0" max="5" name="rating" placeholder="4.8" required />
+          </div>
+
+          <div class="field-group">
+            <label for="photourl">Photo URL</label>
+            <input id="photourl" type="url" name="photourl" placeholder="https://example.com/home.jpg" required />
+          </div>
+
+          <button type="submit" class="primary-btn auth-submit">Submit listing</button>
+        </form>
+
+        <a href="/users" class="back-link">← Back to home</a>
+      </div>
+    </div>
+  </body>
+</html>

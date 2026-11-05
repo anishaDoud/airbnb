@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= home ? home.homeName : 'Home details' %></title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body class="min-h-screen bg-slate-50 text-slate-800">
+    <div class="page-shell detail-page">
+      <a href="/users" class="back-link">← Back to homes</a>
+
+      <% if (home) { %>
+        <div class="detail-hero">
+          <div class="detail-image-wrap">
+            <img
+              src="<%= home.photourl || 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200' %>"
+              alt="<%= home.homeName %>"
+              class="detail-image"
+            />
+          </div>
+
+          <div class="detail-content">
+            <span class="eyebrow">Entire home</span>
+            <h1><%= home.homeName %></h1>
+            <p class="detail-location"><%= home.location %></p>
+
+            <div class="detail-meta">
+              <span>★ <%= home.rating || 4.9 %></span>
+              <span>4 guests</span>
+              <span>2 bedrooms</span>
+              <span>2 baths</span>
+            </div>
+
+            <div class="detail-price-box">
+              <div>
+                <strong>$<%= home.price || 180 %></strong>
+                <span>/ night</span>
+              </div>
+              <a href="/users/store/favourites/add?id=<%= home.index ?? 0 %>" class="favorite-btn detail-favorite">Favorite</a>
+            </div>
+
+            <div class="detail-section">
+              <h3>About this place</h3>
+              <p>
+                Enjoy a stylish stay in <%= home.location %> with modern comfort, beautiful natural light,
+                and a cozy living experience designed for relaxing weekends and memorable trips.
+              </p>
+            </div>
+
+            <div class="detail-section">
+              <h3>What this place offers</h3>
+              <ul class="feature-list">
+                <li>Private kitchen</li>
+                <li>Fast Wi-Fi</li>
+                <li>Air conditioning</li>
+                <li>Free parking</li>
+              </ul>
+            </div>
+
+            <button type="button" class="primary-btn detail-book-btn">Reserve</button>
+          </div>
+        </div>
+      <% } else { %>
+        <div class="empty-state">
+          <h1>No home selected</h1>
+          <p>Please choose a home from the listings page.</p>
+        </div>
+      <% } %>
+    </div>
+  </body>
+</html>

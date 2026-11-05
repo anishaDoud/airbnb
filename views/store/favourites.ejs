@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Favourites</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body class="min-h-screen bg-slate-50 text-slate-800">
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand-wrap">
+          <span class="brand-mark">A</span>
+          <span class="brand-name">airbnb</span>
+        </div>
+        <nav class="nav-links">
+          <a href="/users">Home</a>
+          <a href="/users/store/favourites">Favourites</a>
+        </nav>
+      </header>
+
+      <main class="main-content">
+        <section class="listing-section">
+          <div class="section-heading">
+            <div>
+              <span class="eyebrow">Saved homes</span>
+              <h2>Your favourites</h2>
+            </div>
+          </div>
+
+          <% if (homes && homes.length > 0) { %>
+            <div class="card-grid">
+              <% homes.forEach((home) => { %>
+                <% const imageUrl = home.photourl || 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800'; %>
+                <article class="listing-card">
+                  <a href="/users/store/home-details/<%= home.index ?? 0 %>" class="card-main-link">
+                    <div class="listing-image" style="background-image: url('<%= imageUrl %>')"></div>
+                    <div class="listing-body">
+                      <div class="listing-meta">
+                        <span class="badge">FAVORITE</span>
+                        <span class="rating">★ <%= home.rating || 4.9 %></span>
+                      </div>
+                      <h3><%= home.homeName %></h3>
+                      <p><%= home.location %></p>
+                      <div class="price-row">
+                        <strong>$<%= home.price || 180 %>/night</strong>
+                      </div>
+                    </div>
+                  </a>
+                </article>
+              <% }) %>
+            </div>
+          <% } else { %>
+            <div class="empty-state">
+              <h1>No favourites yet</h1>
+              <p>Click Favorite on a home to add it here.</p>
+            </div>
+          <% } %>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
